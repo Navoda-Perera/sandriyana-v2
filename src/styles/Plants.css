@@ -1,0 +1,130 @@
+/* ============================================================
+   PLANTS SECTION STYLES
+   ============================================================ */
+
+.plants-section {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--parchment) 100%);
+}
+
+/* ── GRID ── */
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ── CARD ── */
+.plant-card {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px var(--shadow);
+  position: relative;
+}
+.plant-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(26, 61, 43, 0.2);
+}
+
+/* Card image area */
+.plant-card-img {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plant-card-emoji {
+  font-size: 6rem;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+.plant-card:hover .plant-card-emoji {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Top-right variety tag */
+.plant-card-tag {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: rgba(26, 61, 43, 0.85);
+  color: var(--white);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+}
+
+/* Top-left badge (Best Seller / Rare etc.) */
+.plant-card-badge {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: linear-gradient(135deg, var(--gold), var(--gold-lt));
+  color: var(--forest);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+}
+
+/* Card body */
+.plant-card-body { padding: 1.5rem; }
+
+.plant-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+}
+.plant-card-latin {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--text-lt);
+  margin-bottom: 0.8rem;
+}
+.plant-card-desc {
+  font-size: 0.83rem;
+  line-height: 1.7;
+  color: var(--text-lt);
+  margin-bottom: 1.2rem;
+}
+
+.plant-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--parchment);
+}
+.plant-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sage);
+  background: rgba(61, 107, 82, 0.08);
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+}
+.plant-enquire {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold);
+  cursor: pointer;
+}

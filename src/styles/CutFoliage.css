@@ -1,0 +1,139 @@
+/* ============================================================
+   CUT FOLIAGE SECTION STYLES
+   ============================================================ */
+
+.cutfoliage-section {
+  background: linear-gradient(180deg, #0d2218 0%, #1a3d2b 100%);
+}
+
+/* Override text colors for dark background */
+.cutfoliage-section .section-title { color: var(--white); }
+.cutfoliage-section .section-title em { color: var(--gold-lt); }
+.cutfoliage-section .section-eyebrow { color: var(--gold); justify-content: center; }
+.cutfoliage-section .section-eyebrow::before { display: none; }
+
+/* ── GRID ── */
+.cutfoliage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── CARD ── */
+.cf-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(106, 171, 136, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.cf-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(106, 171, 136, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Image area */
+.cf-card-img {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.cf-card-emoji {
+  font-size: 5rem;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+}
+.cf-card:hover .cf-card-emoji { transform: scale(1.15) rotate(-5deg); }
+
+.cf-card-badge {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: linear-gradient(135deg, var(--gold), var(--gold-lt));
+  color: var(--forest);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+}
+
+/* Body */
+.cf-card-body { padding: 1.5rem; }
+
+.cf-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+.cf-card-latin {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 0.8rem;
+}
+.cf-card-desc {
+  font-size: 0.83rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 1.2rem;
+}
+
+/* Uses tags */
+.cf-uses { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.cf-use-pill {
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mint);
+  border: 1px solid rgba(106, 171, 136, 0.35);
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+}
+
+/* ── MODAL overrides for cut foliage ── */
+.cf-modal-pill {
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(106, 171, 136, 0.15);
+  color: var(--mint);
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid rgba(106, 171, 136, 0.3);
+}
+
+/* ── INTRO banner ── */
+.cf-intro-banner {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 4px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cf-intro-icon { font-size: 3rem; }
+.cf-intro-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+.cf-intro-text p {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+}

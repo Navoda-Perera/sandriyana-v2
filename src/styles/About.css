@@ -1,0 +1,126 @@
+/* ============================================================
+   ABOUT SECTION STYLES
+   ============================================================ */
+
+.about-section {
+  background: var(--cream);
+}
+
+.about-inner {
+  padding: 8rem 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ── LEFT: Visual ── */
+.about-visual { position: relative; }
+
+.about-img-frame {
+  width: 100%;
+  padding-bottom: 120%;
+  background: linear-gradient(135deg, var(--forest) 0%, var(--sage) 50%, #2d7a50 100%);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.about-img-frame .frame-leaf {
+  position: absolute;
+  font-size: 16rem;
+  opacity: 0.2;
+  bottom: -2rem; right: -2rem;
+  transform: rotate(30deg);
+}
+.about-img-frame .frame-stat {
+  position: absolute;
+  bottom: 2rem; left: 2rem;
+  color: white;
+  z-index: 2;
+}
+.about-img-frame .frame-stat strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1;
+  display: block;
+}
+.about-img-frame .frame-stat span {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.about-badge {
+  position: absolute;
+  top: -1.5rem; right: -1.5rem;
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-lt));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(201, 168, 76, 0.4);
+}
+.about-badge strong {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1;
+}
+.about-badge span {
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--forest);
+  opacity: 0.8;
+}
+
+.about-accent-line {
+  width: 2px;
+  height: 120px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  position: absolute;
+  left: -3rem; top: 2rem;
+}
+
+/* ── RIGHT: Text ── */
+.stat-row {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+.stat { display: flex; flex-direction: column; }
+.stat strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--forest);
+  line-height: 1;
+}
+.stat span {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-lt);
+  margin-top: 0.3rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 5rem 5%;
+  }
+  .about-visual { max-width: 400px; margin: 0 auto; }
+  .about-accent-line { display: none; }
+}

@@ -1,0 +1,103 @@
+/* ============================================================
+   LOCATION SECTION STYLES
+   ============================================================ */
+
+.location-section { background: var(--parchment); }
+
+.location-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ── CONTACT ITEMS ── */
+.contact-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.contact-icon {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--forest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.contact-text { flex: 1; }
+.contact-text strong {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+.contact-text span,
+.contact-text a {
+  font-size: 0.92rem;
+  color: var(--text-lt);
+  line-height: 1.6;
+  text-decoration: none;
+}
+.contact-text a:hover { color: var(--forest); }
+
+/* ── ACTION BUTTONS ── */
+.location-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.btn-outline-dark {
+  padding: 0.9rem 2rem;
+  background: transparent;
+  color: var(--forest);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid var(--sage);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-outline-dark:hover {
+  background: var(--forest);
+  color: var(--white);
+}
+
+/* ── MAP ── */
+.map-container {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 50px rgba(26, 61, 43, 0.15);
+}
+.map-container iframe {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 420px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .location-wrap {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

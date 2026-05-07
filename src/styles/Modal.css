@@ -1,0 +1,124 @@
+/* ============================================================
+   PLANT DETAIL MODAL STYLES
+   ============================================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  background: var(--white);
+  border-radius: 6px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.4s ease;
+}
+
+/* Header image area */
+.modal-header {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-header-emoji { font-size: 5rem; }
+
+.modal-close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 10;
+}
+.modal-close:hover { background: rgba(0, 0, 0, 0.6); }
+
+/* Body */
+.modal-body { padding: 2rem 2.5rem; }
+
+.modal-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 0.3rem;
+}
+.modal-latin {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--text-lt);
+  margin-bottom: 1.2rem;
+}
+.modal-body p {
+  font-size: 0.92rem;
+  line-height: 1.9;
+  color: var(--text-lt);
+  margin-bottom: 1rem;
+}
+
+/* Care pills */
+.modal-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.modal-pill {
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(61, 107, 82, 0.1);
+  color: var(--sage);
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid rgba(61, 107, 82, 0.2);
+}
+
+/* Footer CTA */
+.modal-cta {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--parchment);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.modal-btn-secondary {
+  padding: 0.9rem 2rem;
+  background: transparent;
+  color: var(--forest);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid var(--sage);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+.modal-btn-secondary:hover { background: var(--forest); color: var(--white); }

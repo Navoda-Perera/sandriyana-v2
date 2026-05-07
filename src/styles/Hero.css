@@ -1,0 +1,137 @@
+/* ============================================================
+   HERO SECTION STYLES
+   ============================================================ */
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0d2218 0%, #1a3d2b 40%, #2d5c40 70%, #1a3d2b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient glow circles */
+.hero-bg-circles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.hero-bg-circles::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -10%;
+  width: 70vw; height: 70vw;
+  background: radial-gradient(circle, rgba(106,171,136,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-bg-circles::after {
+  content: '';
+  position: absolute;
+  bottom: -15%; left: -5%;
+  width: 50vw; height: 50vw;
+  background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* Decorative leaf art */
+.leaf-art {
+  position: absolute;
+  font-size: 12rem;
+  opacity: 0.04;
+  user-select: none;
+  pointer-events: none;
+}
+.leaf-art.tl { top: 5%;  left: -2%;  transform: rotate(-30deg); }
+.leaf-art.br { bottom: 5%; right: -2%; transform: rotate(150deg); }
+.leaf-art.tr { top: 10%; right: 5%;  transform: rotate(45deg); font-size: 7rem; opacity: 0.06; }
+
+/* Content */
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  padding: 2rem;
+  animation: fadeUp 1.2s ease both;
+}
+
+.hero-eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.hero-eyebrow::before,
+.hero-eyebrow::after {
+  content: '';
+  flex: 1;
+  max-width: 60px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 0.3rem;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--gold-lt);
+}
+
+.hero-subtitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto 3rem;
+  letter-spacing: 0.3px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Scroll hint arrow */
+.scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: bounce 2s ease infinite;
+}
+.scroll-hint svg { opacity: 0.4; }
