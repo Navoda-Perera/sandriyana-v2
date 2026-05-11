@@ -24,11 +24,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Floating badge */}
-          <div className="about-badge">
-            <strong>🌿</strong>
-            <span>Pure &amp; Natural</span>
-          </div>
+          
         </div>
 
         {/* ── RIGHT: Text ── */}
