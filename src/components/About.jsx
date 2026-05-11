@@ -33,7 +33,7 @@ export default function About() {
 
         {/* ── RIGHT: Text ── */}
         <div className="about-text">
-          <div className="section-eyebrow">Our Story</div>
+          
 
           <h2 className="section-title">
             Rooted in <em>Passion</em>,<br />Grown with Purpose
